@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onTouch(View view, MotionEvent motionEvent) {
                 screenY=(int)motionEvent.getY();
                 screenX=(int)motionEvent.getX();
+                myView.moveBall(screenX,screenY);
                 return false;
             }
         });
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Log.v("chad","x:"+screenX+"y:"+screenY);
-                myView.addBall(screenX,screenY);
+//                myView.addBall(screenX,screenY);
             }
         });
     }
